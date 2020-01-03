@@ -1,22 +1,28 @@
 - tasks.each do |task|
   .col-lg-12
-    %div{:class => "border #{task.status == 'complete' ? 'border-success' : 'border-warning'}"}
-      .card.buffer-left.buffer-right
-        .card-body
-          %h3.card-title= task.title
-          %p.card-text= task.description
-          %p.card-text
-            Started: #{task.started_at.to_formatted_s(:short) if task.started_at.present?}
-          %p.card-text
-            Finished: #{task.finished_at.to_formatted_s(:short) if task.finished_at.present?}
-        - if task.employee == current_employee
-          = button_to('complete', complete_task_path(task),
-            method: :put,
-            class: 'btn btn-primary') if task.status == 'in_work'
-          = button_to('Take', take_task_path(task),
-            method: :put,
-            class: 'btn btn-primary') if task.status == 'untaken'
-          = link_to task_path(task), method: :delete do
-            %i.fa.fa-trash
-          = link_to edit_task_path(task) do
-            %i.fa.fa-edit
+    %section.info
+    %section.cards-wrapper
+      .card-grid-space
+        %a.card{href: "https://codetheweb.blog/2017/10/06/html-syntax/", style: "--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)"}
+          %div
+            %h1.card-title= task.title
+            %p.card-text= task.description
+            %p.card-text
+              Started: #{task.started_at.to_formatted_s(:short) if task.started_at.present?}
+            %p.card-text
+              Finished: #{task.finished_at.to_formatted_s(:short) if task.finished_at.present?}
+            %br
+          - if task.employee == current_employee
+            = button_to('complete', complete_task_path(task),
+              method: :put,
+              class: 'btn btn-primary') if task.status == 'in_work'
+            = button_to('Take', take_task_path(task),
+              method: :put,
+              class: 'btn btn-primary') if task.status == 'untaken'
+            = link_to task_path(task), method: :delete do
+              %i.fa.fa-trash
+            = link_to edit_task_path(task) do
+              %i.fa.fa-edit
+            -# .date= Time.now
+            -# .tags
+            -#   .tag HTML

@@ -81,6 +81,7 @@ GEM
     commonjs (0.2.7)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
+    database_cleaner (1.7.0)
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -236,9 +237,6 @@ GEM
     sexp_processor (4.13.0)
     shoulda-matchers (4.1.2)
       activesupport (>= 4.2.0)
-    simple_form (5.0.1)
-      actionpack (>= 5.0)
-      activemodel (>= 5.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -296,6 +294,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.4, >= 3.4.1)
   byebug
   capybara (>= 2.15)
+  database_cleaner
   devise (~> 4.7, >= 4.7.1)
   devise-bootstrap-views
   factory_bot_rails
@@ -314,7 +313,6 @@ DEPENDENCIES
   sassc-rails (>= 2.1.0)
   selenium-webdriver
   shoulda-matchers
-  simple_form (~> 5.0, >= 5.0.1)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
