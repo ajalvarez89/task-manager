@@ -1,0 +1,30 @@
+<div class="text-center">
+  <h1>
+    <%= @employee.first_name %>
+    <%= @employee.last_name %>
+  </h1>
+</div>
+<div class="col-lg-4">
+  <h2 class="text-center">Untaken</h2>
+  <% if @employee.assigned_tasks.untaken.present? %>
+    <%= render partial: 'employees/tasks', locals: { tasks: @employee.assigned_tasks.untaken } %>
+  <% else %>
+    <h1 class="text-center">No tasks for you</h1>
+  <% end %>
+</div>
+<div class="col-lg-4">
+  <h2 class="text-center">In Work</h2>
+  <% if @employee.assigned_tasks.in_work.present? %>
+    <%= render partial: 'employees/tasks', locals: { tasks: @employee.assigned_tasks.in_work } %>
+  <% else %>
+    <h1 class="text-center">No tasks in work</h1>
+  <% end %>
+</div>
+<div class="col-lg-4">
+  <h2 class="text-center">Completed</h2>
+  <% if @employee.assigned_tasks.completed.present? %>
+    <%= render partial: 'employees/tasks', locals: { tasks: @employee.assigned_tasks.completed } %>
+  <% else %>
+    <h1 class="text-center">No completed tasks</h1>
+  <% end %>
+</div>

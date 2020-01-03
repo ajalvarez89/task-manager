@@ -22,6 +22,14 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'devise-bootstrap-views'
+gem 'font-awesome-rails'
+gem 'haml-rails', '~> 1.0'
+gem 'twitter-bootstrap-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'simple_form', '~> 5.0', '>= 5.0.1'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

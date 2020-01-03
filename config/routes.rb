@@ -1,6 +1,25 @@
 Rails.application.routes.draw do
 
   devise_for :employees
-  # root to: "home#index"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  devise_scope :employee do
+    authenticated :employee do
+      root 'employees#profile', as: :authenticated_root
+    end
+
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
+  resources :employees, only: %i[show update edit] do
+    collection do
+      get :profile
+    end
+  end
+  resources :tasks do
+    member do
+      put :complete
+      put :take
+    end
+  end
 end
