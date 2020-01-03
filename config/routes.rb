@@ -11,11 +11,13 @@ Rails.application.routes.draw do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
   end
+
   resources :employees, only: %i[show update edit] do
     collection do
       get :profile
     end
   end
+
   resources :tasks do
     member do
       put :complete

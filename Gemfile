@@ -30,6 +30,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'simple_form', '~> 5.0', '>= 5.0.1'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
+gem 'font-awesome-sass-rails', '~> 3.0', '>= 3.0.2.2'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

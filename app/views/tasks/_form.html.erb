@@ -10,7 +10,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :assignee_id, 'By default task assignee to you!' %>
+    <%= f.label :assignee_id, 'Assign to:' %>
     <%= f.select :assignee_id, options_from_collection_for_select(Employee.all, :id, :email, current_employee.id),
       {}, class: 'form-control' %>
   </div>
