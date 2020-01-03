@@ -1,24 +1,34 @@
-# README
+# task-manager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an APP for manage tasks
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+Just run the bin setup:
 
-* System dependencies
+```bash
+  bin/setup
+```
+or
 
-* Configuration
+```bash
+  bundle install
+  yarn install --check-files
+```
 
-* Database creation
+Now you should create db, run the migrates and seeds:
 
-* Database initialization
+```bash
+  rails db:create db:migrate db:seed
+```
 
-* How to run the test suite
+To run the app:
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+  rails server
+```
 
-* Deployment instructions
-
-* ...
+## Pending
+- Install rspec
+- Create tests
+- config serializers
